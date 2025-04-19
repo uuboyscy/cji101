@@ -52,9 +52,6 @@ for _ in range(3):
             f.write(article_content)
 
     # Update URL
-    # print(soup.select('a[class="btn wide"]'))
-    # url = "https://www.ptt.cc" + soup.select('a[class="btn wide"]')[1]["href"]
-
     for url_tag in soup.select('a[class="btn wide"]'):
         if "上頁" in url_tag.text:
             url = "https://www.ptt.cc" + url_tag["href"]
