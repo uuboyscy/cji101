@@ -12,7 +12,13 @@ headers = {
 
 res = requests.get(url, headers=headers)
 
-# print(res)
+"""
+Schema of response:
+{'code': 200,
+ 'data': {'newsList': [{'id': '6672960',
+                        'imageUrl': 'https://media.nownews.com/nn_media/thumbnail/2025/04/1745036907816-3d0069c0e0684a6b9958e7ee6df26689-800x450.webp?unShow=false',
+                        'imageVideoUrl': '', ...
+"""
 # pprint(json.loads(res.text))
 article_list = json.loads(res.text)["data"]["newsList"]
 print(len(article_list))
