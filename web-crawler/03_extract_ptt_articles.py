@@ -3,7 +3,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-from crawler_utilities import extract_article_content
+from crawler_utilities import extract_article_content, replace_illegal_chars
 
 FOLDER_PATH = Path("ptt_article/")
 FOLDER_PATH.mkdir(parents=True, exist_ok=True)
@@ -39,11 +39,14 @@ for _ in range(3):
         print(f"Title: {title}")
         print(f"URL: {article_url}")
         print("========")
+
         # Extract article content
         article_content = extract_article_content(article_url)
         # print(article_content)
         print("========")
-        article_file_name = f"{title}.txt"
+
+        # Load article content to file
+        article_file_name = replace_illegal_chars(f"{title}.txt")
         article_file_path = FOLDER_PATH / article_file_name
         with article_file_path.open("w", encoding="utf-8") as f:
             f.write(article_content)

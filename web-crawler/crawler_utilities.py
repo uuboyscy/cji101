@@ -25,6 +25,15 @@ def extract_article_content(article_url: str) -> str:
 
     return article_content_tag.text
 
+def replace_illegal_chars(illegal_char: str) -> str:
+    """Replace Windows illegal characters in filename."""
+    illegal_chars = ["<", ">", ":", "\"", "/", "\\", "|", "?", "*"]
+
+    for char in illegal_chars:
+        illegal_char = illegal_char.replace(char, "_")
+
+    return illegal_char
+
 
 if __name__ == "__main__":
     article_url = "https://www.ptt.cc/bbs/Gossiping/M.1745024751.A.77F.html"
