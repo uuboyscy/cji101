@@ -29,3 +29,21 @@
   - `poetry install` to set up virtual environment
   - `poetry add <package_name>` to install new packages
   - If VSCode cannot recognize virtual environment, execute `poetry env info` to find executable
+
+## 20250419
+1. Setup environment Poetry
+2. Install `requests` and `BeautifulSoup`
+3. Usage of packages
+4. PTT (static web) for example
+    - Crawl titles and links
+    - Multiple pages
+    - Crawl article content
+    - Load to file
+5. Dynamic web page
+6. Pandas
+
+### When to use `GET`/`POST`
+- requests.post(data=data<Form data>, json=json<request payload>)
+- Form data example
+  - https://github.com/uuboyscy/course-PyETL/blob/main/part03_requestWithPost/04_organic_gov.ipynb
+
