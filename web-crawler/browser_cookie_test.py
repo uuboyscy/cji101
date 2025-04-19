@@ -19,8 +19,15 @@ def fetch_tibame_course():
 
     cookies = _fetch_cookies_from_browser("tibame.com")
     json_str = "Enter your own data"
+    data = {"some_key": "some_value"}
 
-    response = requests.post(url, headers=headers, cookies=cookies, json=json.loads(json_str))
+    response = requests.post(
+        url,
+        headers=headers,
+        cookies=cookies,
+        json=json.loads(json_str),
+        data=data,
+    )
 
     if response.ok:
         soup = BeautifulSoup(response.text, "html.parser")
