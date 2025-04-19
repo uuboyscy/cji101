@@ -41,6 +41,7 @@
     - Load to file
 5. Dynamic web page
 6. Pandas
+https://docs.uuboyscy.dev/docs/category/pandas-tutorial
 
 ### When to use `GET`/`POST`
 - requests.post(data=data<Form data>, json=json<request payload>)
