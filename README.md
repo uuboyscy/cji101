@@ -30,7 +30,7 @@
   - `poetry add <package_name>` to install new packages
   - If VSCode cannot recognize virtual environment, execute `poetry env info` to find executable
 
-## 20250419
+### 20250419
 1. Setup environment Poetry
 2. Install `requests` and `BeautifulSoup`
 3. Usage of packages
@@ -48,3 +48,5 @@ https://docs.uuboyscy.dev/docs/category/pandas-tutorial
 - Form data example
   - https://github.com/uuboyscy/course-PyETL/blob/main/part03_requestWithPost/04_organic_gov.ipynb
 
+## Note
+- [Flask 20250510](note/flask-20250510.md)
