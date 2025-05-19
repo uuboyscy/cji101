@@ -50,3 +50,4 @@ https://docs.uuboyscy.dev/docs/category/pandas-tutorial
 
 ## Note
 - [Flask 20250510](note/flask-20250510.md)
+- [ETL 20250518](note/etl-20250518.md)
